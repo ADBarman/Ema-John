@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import fakeData from '../../fakeData';
+import Product from '../Product/Product';
 
 const ProductDetails = () => {
     const {productKey} = useParams();
@@ -8,7 +9,8 @@ const ProductDetails = () => {
 
     return (
         <div>
-            <h3>{productKey} Product Details coming soon</h3>
+            <h3>Your Product Details</h3>
+            <Product showAddToCart={false} product={product}></Product>
         </div>
     );
 };
